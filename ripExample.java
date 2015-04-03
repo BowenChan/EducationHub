@@ -14,23 +14,25 @@ public class ripExample
 	{
 		Document doc = Jsoup.connect("https://phet.colorado.edu/en/simulation/forces-and-motion-basics").get();
 
-		String html = "<p>An <a href='http://example.com/'><b>example</b></a> link.</p>";
-		//Document doc = Jsoup.parse(html);
 		Element element = doc.select("head").first();
-		
-
+	
 		String text = doc.body().text(); // "An example link"
 		String linkHref = element.attr("title"); // "http://example.com/"
 		String linkText = element.text(); // "example""
-		
 
 		System.out.println(linkText);
 		
-		
 		Elements elements = doc.select("meta");
-		element = elements.get(2);
 		
-		String str = element.attr("content");
+		
+		String str = "";
+		for(int i =0; i < elements.size(); i++)
+		{
+			if(elements.get(i).attr("name").contains("description"))
+			{
+				 str = elements.get(i).attr("content");
+			}
+		}
 		//text = doc.body().text(); // "An example link"
 		
 		//linkText = element.text(); 
