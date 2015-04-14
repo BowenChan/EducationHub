@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
     	echo "</td>";
 
     	echo "<td>"; ?>
-    	<a href ="<?php echo $row["lesson_link"]; ?>" />Link</a>
+    	<a href ="<?php echo $row["lesson_link"]; ?>" >Link</a>
     	<?php
     	echo "</td>";
 
