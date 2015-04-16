@@ -6,6 +6,7 @@
 	</head>
 
 	<body>
+		<?php include("data.php") ?>
 
 		?>
 	</body>
