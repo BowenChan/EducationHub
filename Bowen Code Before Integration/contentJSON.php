@@ -11,7 +11,7 @@
 	<table>
 
 		<?php
-			
+			$posts = array();
 			//$db2 = mysqli_select_db($link, $db);
 			$q =  mysqli_query($conn,"SELECT * FROM `" . $table . "`");
 			/*
@@ -40,7 +40,7 @@
     				$author = $row['author'];
     				$content = $row['content_type'];
     				$time = $row['time_scraped'];
-    				$posts[] = array("Id" => $id, "Title" => $title, "Category" => $category, "Description" => $description, "Link" =>$link, "Image" => $image, "Grade" => $grade, "Author" => $author, "Content" => $content, "Time Scraped" => $time);
+    				$posts[] = array("Id" => $id, "Title" => $title, "Category" => $category, "Description" => $description, "Link" =>$link, "Image" => $image, "Grade" => $grade, "Author" => $author, "Content" => $content, "TimeScraped" => $time);
     				/*
     				$idArr[] = array("Id" => $id);
     				$titleArr[] = array("Title" => $title);
@@ -55,9 +55,11 @@
 					*/
 				}
 				$response['Video'] = $posts;
-
-				$fp = fopen('videos.json', 'w');
-				fwrite($fp, json_encode($response, JSON_PRETTY_PRINT));
+				
+				$fp = fopen('videos.json', 'w') or die("can't open file");
+				$data = json_encode($response, JSON_PRETTY_PRINT);
+				echo json_last_error_msg();
+				fwrite($fp, $data);
 				fclose($fp);
 			
 

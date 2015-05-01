@@ -31,7 +31,7 @@
 							if($word != "")
 							{
 								$i++;
-								$posts[] = array($i => $word);
+								$posts[] = array("Id" => $i,"Category" => $word);
 							}
 							
 							echo "<tr>";
@@ -47,7 +47,7 @@
 				$response['Categories'] = $posts;
 
 				$fp = fopen('results.json', 'w');
-				fwrite($fp, json_encode($response));
+				fwrite($fp, json_encode($response,  JSON_PRETTY_PRINT));
 				fclose($fp);
 			
 

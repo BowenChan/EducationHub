@@ -1,16 +1,31 @@
 <!DOCTYPE HTML>
+<!--
 <html>
 	<head>
 		<title>EducationHub</title>
 
 	</head>
-	<body>
+	<body ng-controller = "cat">
 		<h1> We have these categories</h1>
+
 		<ul>
-			<li> Physics </li>
-			<li> Biology </li>
-			<li> Mathematics </li>
-			<li> English </li>
+			
+			<li ng-repeat = "data in thing.Categories"> {{data.Id}} </li>
+			
 		</ul>
 	</body>
 </html>
+-->
+
+<body ui-view >
+    <div ng-controller = "pagination" >
+                <ul >
+                    <li ng-repeat = "data in subj.Categories"> {{data.Category}} </li>
+                 
+                </ul>
+            
+        
+        
+        <hr />
+    </div>
+</p>
