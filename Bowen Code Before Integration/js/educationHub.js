@@ -43,7 +43,10 @@
 
 			      		views:{
 				      		'body' : {
-				      			//templateUrl: "bottom.php",
+				      			//templateUrl: "welcome.html",
+				      		},
+				      		'header' :{
+				      			template:" <h1>Welcome to our site</h1>",
 				      		},
 				      		'@' :{
 				      			templateUrl: "welcome.html"
@@ -92,7 +95,14 @@
 			        })
 			        .state('category',{
 			        	url: "/category",
-			        	templateUrl: "category.html"
+			        	views :{
+			        		'header' :{
+			        			templateUrl: "category/header.html",
+			        		},
+			        		'@' :{
+			        			templateUrl: "category.html"
+			        		}
+			        	}
 			        })
 			        .state('physics',{
 			        	url: "/category/none",
@@ -109,25 +119,28 @@
 
 		    	
 		    })
+
 		    educationHub.controller('h', ['$scope', function($scope){
 		   		$scope.menu = "Headllo";
 		   	}])
+
+		    educationHub.controller('start', ['$scope', function($scope){
+		    	$scope.result = "";
+		    }])
 
 		   	educationHub.controller('show', ['$scope' ,'$state', function($scope, $state){
 		   		$scope.$state = $state;
 		   	}])
 
-		   	 
+		   
 		   	educationHub.controller('pagination',['$scope', '$log', '$http', function($scope, $log, $http) {
 		   		
-		   		$scope.items;	
+		   		
 				$http.get('videos.json')
-				
 				.then(function(response) {
 					
 					$scope.numPages = Math.round(response.data.Video.length/10);
 					$scope.items = response.data;
-
 				})
 				.catch(function(response) {
 					console.error('Gists error', response.status, response.data);
@@ -151,29 +164,5 @@
 				});
 
 
-
-			    $scope.totalItems = 998;
-			    
-
-			    $scope.setPage = function (pageNo) {
-			    	$scope.currentPage = pageNo;
-			    };
-
-			    $scope.pageChanged = function() {
-			        $log.log('Page changed to: ' + $scope.currentPage);
-			    };
-
-			    $scope.filteredTodos = [];
-  				$scope.currentPage = 1;
-  				$scope.numPerPage = 10;
-				$scope.maxSize = 5;
-  
-
-			    $scope.$watch('currentPage + numPerPage', function() {
-				    var begin = (($scope.currentPage - 1) * $scope.numPerPage)
-				    , end = begin + $scope.numPerPage;
-				    
-				    $scope.filteredTodos = $scope.items.slice(begin, end);
-				});
 		    }]);
-	
+				
