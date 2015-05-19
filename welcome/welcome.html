@@ -1,0 +1,36 @@
+<body ng-controller = "start" ui-view = "body">
+
+    <div>
+	
+		<label > Search: <input  ng-style= "{'width': '50%'}" ng-model="result"></label>
+		<br> 
+			<table ng-show = "result.length > 3" ng-controller = "pagination">
+	            <tr>
+	                <td>Title</td>
+	                <td>Description</td> 
+	                <td>Lesson Link</td>
+	                <td>Lesson Image</td>
+	                <td>Category</td>
+	                <td>Grade level</td>
+	                <td>Author</td>
+	                <td>Content Type</td>
+	                <td>Time Scraped</td>
+	            </tr>
+            	<!--<div infinite-scroll='loadMore()' infinite-scroll-distance ='2'>-->
+                <tr ng-repeat = "data in items.Video | filter:result">
+                    <td> {{data.Title}} </td>
+                    <td> {{data.Description}} </td>
+                    <td> <a href = "{{data.Link}}"> Link </a> </td>
+                    <td> <img src = "{{data.Image}}"> </td>
+                    <td> {{data.Category}} </td>
+                    <td> {{data.Grade}} </td>
+                    <td> {{data.Author}} </td>
+                    <td> {{data.Content}} </td>
+                    <td> {{data.TimeScraped}}</td>
+                    
+                </tr>
+            
+        	</table>
+	</div>
+
+</body>

@@ -1,0 +1,14 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+}
+
+table, td,tr{
+	border: 1px solid black;
+	border-collapse:collapse;
+}
+
+.top{
+	font-weight:bold;
+	font-size:2em;
+}

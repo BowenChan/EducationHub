@@ -1,16 +1,22 @@
 <?php
 
+
+
 	session_start();
 
 	include('include/connect.php');
+
+
+    //echo "Connected successfully<br>\n";
+
 
     $sql = "SELECT * FROM usersTable";
 
     $result = mysqli_query($conn,$sql);
 
+
+
 	$found = 0;
-
-
 
 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 
@@ -24,6 +30,14 @@
 
 		}
 
+		if( strcmp($row['username'], $_POST['username']) == 0)
+
+		{
+
+			$found = 2;
+
+		}
+
 	}    	
 
 	if($found == 1)
@@ -34,59 +48,102 @@
 
 		$_SESSION['email_error'] = -1;
 
-		header('Location:signup.php'); 
+		header('Location:/cs160/sec1group1/#/Register'); 
 
 	}
 
-	else
+
+	if($found == 2)
 
 	{
 
-		$sqll = "INSERT INTO usersTable (firstname,lastname,email,password,status,date) 
+		$found = 0;
 
-		VALUES (" . 
 
-		"\"" . $_POST['fname'] . "\"" . "," .
 
-		"\"" . $_POST['lname'] . "\"" . "," .
+		$_SESSION['username_error'] = -2;
 
-		"\"" . $_POST['email'] . "\"" . "," .
-
-		"\"" . $_POST['password'] ."\"" . "," .
-
-		"0" . "," . 
-
-		"CURDATE()" . ");";
-
-    	$result = mysqli_query($conn,$sqll);
-
-		echo "Error: " . $sqll . "<br>" . mysqli_error($conn);
-
-		echo "<html>";
-
-		echo "<head>";
-
-		echo "</head>";
-
-		echo "<body>";
-
-		echo "<p> t" . $sqll . "</p>";
-
-		echo "<p> t" . $result . "</p>";
-
-		echo "</body>";
-
-		echo "</html>";
+		header('Location: /cs160/sec1group1/#/Register'); 
 
 	}
 
+
+
+	else
+
+
+
+	{
+
+
+
+		$sqll = "INSERT INTO usersTable (firstname,lastname,email,password,status,date,username) 
+
+
+
+		VALUES (" . 
+
+
+
+		"\"" . $_POST['fname'] . "\"" . "," .
+
+
+
+		"\"" . $_POST['lname'] . "\"" . "," .
+
+
+
+		"\"" . $_POST['email'] . "\"" . "," .
+
+
+
+		"\"" . $_POST['password'] ."\"" . "," .
+
+
+
+		"0" . "," . 
+
+
+
+		"CURDATE()" . "," .
+
+		
+
+		"\"" . $_POST['username'] ."\"" .
+
+			 ");";
+
+
+
+    	$result = mysqli_query($conn,$sqll);
+
+
+
+	header('Location:/cs160/sec1group1/');
+
+
+
+	}
+
+
+
 	mysqli_close($conn);
+
+
 
 	//go to userhomepage here
 
 
 
+
+
+
+
 ?>
+
+
+
+
 
 
 

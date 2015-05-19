@@ -1,0 +1,109 @@
+.afs-museo-slab { font-family: "Museo Slab", Rockwell, serif; ;}
+
+.afs-cartogothic-std { font-family: "CartoGothic Std", "Verdana", "Lucida Grande", "Gill Sans", "Arial", "Helvetica", sans-serif; font-size: 1.035em;}
+
+.afs-museo-slab { font-family: "Museo Slab", Rockwell, serif; font-size: 1.000em;}
+
+.afs-lekton { font-family: "Lekton", Menlo, Courier New, Courier, Mono, monospace; font-size: 1.065em;}
+
+
+@font-face {
+font-family: 'Museo Slab';
+src: url('/museo_slab_100-webfont.eot');
+src: local('☺'), url('museo_slab_100-webfont.woff') format('woff'), url('museo_slab_100-webfont.ttf') format('truetype'), url('museo_slab_100-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'Museo Slab';
+src: url('museo_slab_100italic-webfont.eot');
+src: local('☺'), url('museo_slab_100italic-webfont.woff') format('woff'), url('museo_slab_100italic-webfont.ttf') format('truetype'), url('museo_slab_100italic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+
+@font-face {
+font-family: 'CartoGothic Std';
+src: url('CartoGothicStd-Bold-webfont.eot');
+src: local('☺'), url('CartoGothicStd-Bold-webfont.woff') format('woff'), url('CartoGothicStd-Bold-webfont.ttf') format('truetype'), url('CartoGothicStd-Bold-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'CartoGothic Std';
+src: url('CartoGothicStd-BoldItalic-webfont.eot');
+src: local('☺'), url('CartoGothicStd-BoldItalic-webfont.woff') format('woff'), url('CartoGothicStd-BoldItalic-webfont.ttf') format('truetype'), url('CartoGothicStd-BoldItalic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: 'CartoGothic Std';
+src: url('CartoGothicStd-Book-webfont.eot');
+src: local('☺'), url('CartoGothicStd-Book-webfont.woff') format('woff'), url('CartoGothicStd-Book-webfont.ttf') format('truetype'), url('CartoGothicStd-Book-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'CartoGothic Std';
+src: url('CartoGothicStd-Italic-webfont.eot');
+src: local('☺'), url('CartoGothicStd-Italic-webfont.woff') format('woff'), url('CartoGothicStd-Italic-webfont.ttf') format('truetype'), url('CartoGothicStd-Italic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+
+@font-face {
+font-family: 'Museo Slab';
+src: url('museo_slab_100-webfont.eot');
+src: local('☺'), url('museo_slab_100-webfont.woff') format('woff'), url('museo_slab_100-webfont.ttf') format('truetype'), url('museo_slab_100-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'Museo Slab';
+src: url('museo_slab_100italic-webfont.eot');
+src: local('☺'), url('museo_slab_100italic-webfont.woff') format('woff'), url('museo_slab_100italic-webfont.ttf') format('truetype'), url('museo_slab_100italic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+
+@font-face {
+font-family: 'Lekton';
+src: url('Lekton-Bold-webfont.eot');
+src: local('☺'), url('Lekton-Bold-webfont.woff') format('woff'), url('Lekton-Bold-webfont.ttf') format('truetype'), url('Lekton-Bold-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'Lekton';
+src: url('Lekton-Italic-webfont.eot');
+src: local('☺'), url('Lekton-Italic-webfont.woff') format('woff'), url('Lekton-Italic-webfont.ttf') format('truetype'), url('Lekton-Italic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: 'Lekton';
+src: url('Lekton-Regular-webfont.eot');
+src: local('☺'), url('Lekton-Regular-webfont.woff') format('woff'), url('Lekton-Regular-webfont.ttf') format('truetype'), url('Lekton-Regular-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
